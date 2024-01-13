@@ -10,6 +10,6 @@ class Demo {
 }
 
 void main() {
-  Demo obj = Demo(x: null, y: "pk");
+  Demo obj = Demo(x: 9, y: "pk");
   obj.display();
 }
