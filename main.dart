@@ -1,3 +1,5 @@
+// main() function of clone app
+
 import "clone_of_demo_app.dart";
 
 void main() {
