@@ -9,7 +9,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp();
+  const MyApp();    // we have to pass key to the parent class
+  // const MyApp({super.key});
 
   Widget build(BuildContext context) {
     print("in build of MyApp");
