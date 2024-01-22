@@ -1,19 +1,43 @@
-// main() function of clone app
-
-import "clone_of_demo_app.dart";
+import 'package:flutter/material.dart';
 
 void main() {
-  dynamic obj = const MyApp();
-  runApp(obj);
-  // print(obj.hashCode);
+  runApp( const MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp();    // we have to pass key to the parent class
-  // const MyApp({super.key});
+// import 'package:flutter/material.dart';
 
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
   Widget build(BuildContext context) {
-    print("in build of MyApp");
-    return MaterialApp();
+    return MaterialApp(home: Scaffold(
+      appBar: AppBar(
+        title: const Text('@prtkkor'),
+        backgroundColor: const Color.fromARGB(255, 170, 243, 212),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: const Color.fromARGB(255, 170, 243, 212),
+        selectedItemColor: Colors.black,
+        selectedFontSize: 0,
+        iconSize: 28,
+        type: BottomNavigationBarType.fixed,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.insert_emoticon_rounded),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.admin_panel_settings_rounded),
+            label: '',
+          ),
+        ],
+      ),
+    ),
+    debugShowCheckedModeBanner: false);
   }
 }
